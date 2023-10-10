@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Comparator
+// Comparators
 bool compareBy(const pair<int, int>& a,
 			const pair<int, int>& b)
 {
