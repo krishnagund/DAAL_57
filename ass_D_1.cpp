@@ -1,5 +1,3 @@
-// C++ program to find all subsets of given set. Any
-// repeated subset is considered only once in the output
 #include <iostream>
 #include <vector>
 #include <algorithm>
