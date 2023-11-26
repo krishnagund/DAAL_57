@@ -1,24 +1,22 @@
 #include <iostream>
-#include <cstring>  // Include the cstring header for memset
-
+#include <cstring>  
 using namespace std;
 
 int countCoinChangeWays(int coins[], int n, int sum) {
-    // Create an array to store the number of ways for each sum
+    
     int dp[sum + 1];
     memset(dp, 0, sizeof(dp));
 
-    // Base case: There is one way to make sum = 0 (empty set)
+   
     dp[0] = 1;
 
-    // Iterate through each coin and update the dp array
+    
     for (int i = 0; i < n; ++i) {
         for (int j = coins[i]; j <= sum; ++j) {
             dp[j] += dp[j - coins[i]];
         }
     }
 
-    // The result is stored at the last index of dp array
     return dp[sum];
 }
 
